@@ -57,6 +57,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("How are you please this is not for you :)");
+});
+
 server.listen(PORT, "0.0.0.0", () => {
   connectDB();
   startServer(); //Start the server that receives signals from MT5
